@@ -1,1 +1,1 @@
-# nu-lessons
+# Neural University
