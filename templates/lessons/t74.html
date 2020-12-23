@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static crispy_forms_tags %}
+
+{% block js %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'js/lessons/t74.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+    <h1>Lesson 7, Task 4</h1>
+    <div id="content-lesson-t74" class="content">
+        {% crispy form %}
+        {% if image_url %}
+            {% autoescape off %}
+            <div class="history">{{ history }}</div>
+            <div class="digit">{{ digit }}</div>
+            {% endautoescape %}
+            <div class="image-url"><img src="{{ image_url }}" alt="" /></div>
+        {% endif %}
+    </div>
+{% endblock content %}

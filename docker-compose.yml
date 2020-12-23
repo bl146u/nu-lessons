@@ -1,0 +1,15 @@
+version: '3'
+
+
+services:
+
+  nu_lessons:
+    container_name: nu_lessons
+    image: nu_lessons
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    command: /app/compose/gunicorn.sh
+    volumes:
+      - ./assets:/app/staticfiles
+      - ./media:/app/media
