@@ -135,3 +135,5 @@ dmypy.json
 /assets/admin/
 /assets/debug_toolbar/
 /assets/CACHE/
+/assets/django-admin-autocomplete-filter/
+/assets/django_extensions/
