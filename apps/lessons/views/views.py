@@ -35,6 +35,7 @@ class T74View(FormView):
                 "history": history,
                 "digit": digit,
                 "image_url": f"{settings.MEDIA_URL}{image_url}.jpg",
+                "processed_image_url": f"{settings.MEDIA_URL}{image_url}-processed.jpg",
             }
         except:
             pass
