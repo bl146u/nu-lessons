@@ -13,3 +13,15 @@ services:
     volumes:
       - ./assets:/app/staticfiles
       - ./media:/app/media
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    depends_on:
+      - nu_lessons
+    ports:
+      - 80:8000
+    volumes:
+      - ./assets:/app/assets
+      - ./media:/app/media
+      - ./compose/nginx/conf.d:/etc/nginx/conf.d
