@@ -16,7 +16,10 @@
             <div class="history">{{ history }}</div>
             <div class="digit">{{ digit }}</div>
             {% endautoescape %}
-            <div class="image-url"><img src="{{ image_url }}" alt="" /></div>
+            <div class="image-url">
+                <img src="{{ image_url }}" alt="" />
+                <img src="{{ processed_image_url }}" alt="" />
+            </div>
         {% endif %}
     </div>
 {% endblock content %}
